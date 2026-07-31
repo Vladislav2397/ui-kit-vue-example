@@ -1,7 +1,7 @@
 {
   "name": "@vladislav2397/ui-kit-example",
   "private": false,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "main": "./dist/ui-kit-example.umd.cjs",
   "module": "./dist/ui-kit-example.js",
