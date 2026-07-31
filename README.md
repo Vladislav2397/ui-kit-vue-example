@@ -1,6 +1,6 @@
 # Vue 3 + TypeScript + Vite UI Kit
 
-Базовый UI-kit на Vue 3 с Vite. Пока содержит один компонент — `UiButton`.
+Базовый UI-kit на Vue 3 с Vite. Компоненты: `UiButton`, `UiChip`.
 
 ## Разработка
 
@@ -35,12 +35,13 @@ npm run build
 
 ```vue
 <script setup lang="ts">
-import { UiButton } from 'ui-kit-example'
+import { UiButton, UiChip } from 'ui-kit-example'
 import 'ui-kit-example/style.css'
 </script>
 
 <template>
   <UiButton variant="primary" size="md">Нажми</UiButton>
+  <UiChip variant="secondary" removable @remove="() => {}">Тег</UiChip>
 </template>
 ```
 
@@ -52,3 +53,14 @@ import 'ui-kit-example/style.css'
 | `size` | `'sm' \| 'md' \| 'lg'` | `'md'` |
 | `disabled` | `boolean` | `false` |
 | `type` | `'button' \| 'submit' \| 'reset'` | `'button'` |
+
+### Props `UiChip`
+
+| Prop | Тип | По умолчанию |
+|------|-----|--------------|
+| `variant` | `'primary' \| 'secondary' \| 'outline'` | `'primary'` |
+| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` |
+| `disabled` | `boolean` | `false` |
+| `removable` | `boolean` | `false` |
+
+Событие `remove` — клик по кнопке удаления (если `removable`).

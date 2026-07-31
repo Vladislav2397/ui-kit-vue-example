@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { UiButton } from './components/Button'
+import { UiChip } from './components/Chip'
 </script>
 
 <template>
@@ -25,6 +26,28 @@ import { UiButton } from './components/Button'
       <div class="demo__row">
         <UiButton disabled>Disabled</UiButton>
         <UiButton variant="secondary" disabled>Disabled</UiButton>
+      </div>
+    </section>
+
+    <section class="demo__section">
+      <h2>Chip</h2>
+
+      <div class="demo__row">
+        <UiChip>Primary</UiChip>
+        <UiChip variant="secondary">Secondary</UiChip>
+        <UiChip variant="outline">Outline</UiChip>
+      </div>
+
+      <div class="demo__row">
+        <UiChip size="sm">Small</UiChip>
+        <UiChip size="md">Medium</UiChip>
+        <UiChip size="lg">Large</UiChip>
+      </div>
+
+      <div class="demo__row">
+        <UiChip removable>Removable</UiChip>
+        <UiChip variant="secondary" removable>Tag</UiChip>
+        <UiChip disabled removable>Disabled</UiChip>
       </div>
     </section>
   </main>
@@ -67,6 +90,10 @@ body {
 .demo > p {
   margin: 0 0 2.5rem;
   color: #64748b;
+}
+
+.demo__section {
+  margin-bottom: 2.5rem;
 }
 
 .demo__section h2 {
